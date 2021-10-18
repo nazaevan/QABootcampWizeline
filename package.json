@@ -1,0 +1,19 @@
+{
+  "name": "todoist",
+  "version": "1.0.0",
+  "description": "Automation project for todoist.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "testcafe chrome ./pom/tests",
+    "login-testing": "testcafe chrome,firefox ./pom/tests/Login.test.js",
+    "smoke-testing": "testcafe chrome ./pom/tests --test-meta type=smoke",
+    "regression-testing": "testcafe chrome ./pom/tests --test-meta type=regression",
+    "load-testing": "testcafe chrome ./pom/tests --test-meta type=load"
+  },
+  "author": "nazaevan",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "testcafe": "^1.16.1"
+  }
+}
