@@ -11,7 +11,11 @@ fixture('Task management feature test')
     .afterEach(async t => {
         await t.click(TodayHomePage.proximoSection)
         while(TodayHomePage.taskListItem.exists){
-            await t.click(TodayHomePage.taskRadioButton)
+            try{
+                await t.click(TodayHomePage.taskRadioButton)
+            }catch(exception){
+                break
+            }
         }
     })
 

@@ -11,8 +11,12 @@ fixture('Project management feature test')
     })
     .afterEach(async t => {
         await t.click(TodayHomePage.proximoSection)
-        while(TodayHomePage.taskDescriptionLabel.exists){
-            await t.click(TodayHomePage.taskRadioButton)
+        while(TodayHomePage.taskListItem.exists){
+            try{
+                await t.click(TodayHomePage.taskRadioButton)
+            }catch(exception){
+                break
+            }
         }
     })
 
