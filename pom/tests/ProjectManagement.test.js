@@ -21,7 +21,6 @@ fixture('Project management feature test')
     })
 
 test.meta('type','smoke')('As a user, I should be able to create a Project', async t => {
-    await t.wait(1000)
     //name of project, isFavorite?(true or false), type of project (list or panel)
     await ProjectPage.addProject('NazaevanProject',true,'list')
     ProjectPage.getCreatedProjectByName('NazaevanProject',true)

@@ -1,8 +1,9 @@
 import { Selector, t } from "testcafe"
+import { GENERAL_CONFING } from '../data/Constants'
 
 class ProjectPage{
     constructor(){
-        this.projectToggleButton = Selector('.expansion_panel__header > .expansion_panel__toggle').withExactText('Proyectos')
+        this.projectToggleButton = Selector('.expansion_panel__header > .expansion_panel__toggle').withExactText(GENERAL_CONFING.TEST_CONFIG.PROJECTS_NAME_TOGGLE_MENU)
         this.addProjectButton = Selector('.expansion_panel__header > .expansion_panel__actions > .adder_icon')
         this.formProjectName = Selector('#edit_project_modal_field_name')
         this.formProjectColor = Selector('.color_dropdown_toggle')
@@ -30,12 +31,6 @@ class ProjectPage{
             await t.click(this.formProjectViewPanel)
         }
         await t.click(this.formProjectSubmit)
-
-        /*.typeText(this.descriptionTaskInput, descriptionTask)
-        .wait(500)
-        .click(this.submitTaskButton)
-        .wait(500)
-        .click(this.cancelTaskButton)*/
     }
 
     async getCreatedProjectByName(projectName){

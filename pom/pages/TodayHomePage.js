@@ -1,8 +1,9 @@
 import { Selector, t } from "testcafe"
+import { GENERAL_CONFING } from '../data/Constants'
 
 class TodayHomePage{
     constructor(){
-        this.title = Selector('div .view_header__content > h1 > .simple_content').withExactText('Hoy')
+        this.title = Selector('div .view_header__content > h1 > .simple_content').withExactText(GENERAL_CONFING.TEST_CONFIG.HOMEPAGE_TITLE)
         this.addTaskButton = Selector('.list_holder > ul > li > .plus_add_button')
         this.nameTaskInput = Selector('.task_editor > .task_editor__editing_area > .task_editor__input_fields > .task_editor__content_field > .richtextinput > .DraftEditor-root > .DraftEditor-editorContainer > .public-DraftEditor-content > div > div')
         this.descriptionTaskInput = Selector('.task_editor > .task_editor__editing_area > .task_editor__input_fields > .task_editor__description_field')
@@ -43,7 +44,6 @@ class TodayHomePage{
         this.calendarNewDayButton = this.calendarNewDaySpanParent.parent(0)
         await t.click(this.calendarNewDayButton)
         await t.click(this.submitTaskButton)
-        await t.wait(500)
         await t.click(this.proximoSection)
         this.dayWeekButton = Selector('.calendar__day > .upcoming_view__day_cell__date > .upcoming_view__day_cell__date__number').withExactText(resultString)
         await t.click(this.dayWeekButton)

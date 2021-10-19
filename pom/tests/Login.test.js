@@ -10,7 +10,6 @@ fixture('Login feature test')
 test.meta('type','smoke')('As a user, I should be able to log in succesfully by providing valid credentials', async t => {
     await t.useRole(STANDARD_USER)
     await t
-        .wait(5000)
         .expect(TodayHomePage.title.exists).ok()
 })
 
