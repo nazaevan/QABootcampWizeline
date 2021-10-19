@@ -20,7 +20,6 @@ fixture('Task management feature test')
     })
 
 test.meta('type','smoke')('As a user, I should be able to create a Task', async t => {
-    await t.wait(5000)
     await TodayHomePage.addTaskToday('test','test')
     let taskList = ["test"]
 
@@ -32,8 +31,7 @@ test.meta('type','smoke')('As a user, I should be able to create a Task', async 
 })
 
 test.meta('type','smoke')('As a user, I should be able to create a Task with an account of days after today', async t => {
-    await t.wait(5000)
-    // Consider only a number of days accrdoing to obtain a task scheduled in the same active week
+    // Consider only a number of days according to obtain a task scheduled in the same active week
     await TodayHomePage.addTaskCurrentDate('test','test',1)
     await t
         .expect(TodayHomePage.taskNameLabelFromCalendar.exists).ok()
@@ -41,7 +39,6 @@ test.meta('type','smoke')('As a user, I should be able to create a Task with an 
 })
 
 test.meta('type','load')('Create task load test', async t => {
-    await t.wait(5000)
     let taskList = []
 
     for(let i = 1; i <= 10; i++){

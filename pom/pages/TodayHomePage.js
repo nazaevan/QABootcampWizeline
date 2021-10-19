@@ -22,26 +22,18 @@ class TodayHomePage{
     async addTaskToday(nameTask, descriptionTask){
         await t
         .click(this.addTaskButton)
-        .wait(500)
         .typeText(this.nameTaskInput, nameTask)
-        .wait(500)
         .typeText(this.descriptionTaskInput, descriptionTask)
-        .wait(500)
         .click(this.submitTaskButton)
-        .wait(500)
         .click(this.cancelTaskButton)
     }
 
     async addTaskCurrentDate(nameTask, descriptionTask, daycount){
         await t
         .click(this.addTaskButton)
-        .wait(500)
         .typeText(this.nameTaskInput, nameTask)
-        .wait(500)
         .typeText(this.descriptionTaskInput, descriptionTask)
-        .wait(500)
         .click(this.calendarButton)
-        .wait(500)
         let date = await this.calendarSelectedDay.innerText
         let dateInt = parseInt(date)
         let result = dateInt+daycount

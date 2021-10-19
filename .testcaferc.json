@@ -1,0 +1,7 @@
+{
+    "selectorTimeout": 8000,
+    "assertionTimeout": 8000,
+    "pageLoadTimeout": 15000,
+    "pageRequestTimeout": 15000,
+    "browserInitTimeout": 250000
+}
