@@ -9,6 +9,8 @@ This project contains functional testcases for todoist.com webpage
 #### ├─ pages/ (It contains the pages mapped from webpage)
 #### ├─ tests/ (It contains all the developed tests)
 
+# After clone project, excecute npm run command to install all necessary dependencies
+
 ## For setup and run the project considere the next .env template
 ### This is the base structure of .env file, necessary for the excecution. Create this .env file at root.
 #### Precondition: create a basic account on todoist (with email account, not google account or other.)
