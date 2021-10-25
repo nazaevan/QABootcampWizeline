@@ -14,19 +14,19 @@ test.meta('type','smoke')('As a user, I should be able to log in succesfully by 
 })
 
 test.meta('type','regression')('As a user, I should receive an error message if there is a mistake in the login form. Invalid username and password', async t => {
-    await LoginPage.submitLoginForm('test', 'test')
+    await LoginPage.submitLoginForm(CREDENTIALS.INVALID_USER.USERNAME, CREDENTIALS.INVALID_USER.PASSWORD)
     await t
         .expect(LoginPage.errorMessageInvalidEmailddress.exists).ok()
 })
 
 test.meta('type','regression')('As a user, I should receive an error message if there is a mistake in the login form. Wrong password', async t => {
-    await LoginPage.submitLoginForm(CREDENTIALS.STANDARD_USER.USERNAME, 'test')
+    await LoginPage.submitLoginForm(CREDENTIALS.STANDARD_USER.USERNAME, CREDENTIALS.INVALID_USER.PASSWORD)
     await t
-        .expect(LoginPage.errorMessageInvalidUsrOrPss.exists).ok()
+        .expect(LoginPage.errorMessageInvalidUserOrPassword.exists).ok()
 })
 
 test.meta('type','regression')('As a user, I should receive an error message if there is a mistake in the login form. Wrong email', async t => {
     await LoginPage.submitLoginForm('test@algo.com', CREDENTIALS.STANDARD_USER.PASSWORD)
     await t
-        .expect(LoginPage.errorMessageInvalidUsrOrPssEng.exists).ok()
+        .expect(LoginPage.errorMessageInvalidUserOrPasswordEnglish.exists).ok()
 })

@@ -46,7 +46,7 @@ class TodayHomePage{
         .click(this.calendarButton)
         let date = await this.calendarSelectedDay.innerText
         let dateInt = parseInt(date)
-        let result = dateInt+daycount
+        let result = dateInt+parseInt(daycount)
         let resultString = result.toString()
         this.calendarNewDay.withExactText(resultString)
         this.calendarNewDaySpanParent = this.calendarNewDay.parent(0)

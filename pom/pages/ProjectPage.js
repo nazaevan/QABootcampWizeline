@@ -12,6 +12,7 @@ class ProjectPage{
         this.formProjectViewList = Selector('.edit_project_modal__view_radio_group > #project_list_view_style_option')
         this.formProjectViewPanel = Selector('.edit_project_modal__view_radio_group > #project_list_view_style_option')
         this.formProjectSubmit = Selector('button.ist_button_red')
+        this.projectNameLabel = Selector('.collapse > .collapse__wrapper > .collapse__wrapper_inner > ul > li > div > div > a > span')
     }
 
     async addProject(nameProject, isFavorite, type){
@@ -34,7 +35,7 @@ class ProjectPage{
     }
 
     async getCreatedProjectByName(projectName){
-        this.projectNameLabel = Selector('.collapse > .collapse__wrapper > .collapse__wrapper_inner > ul > li > div > div > a > span').withExactText(projectName)
+        this.projectNameLabel.withExactText(projectName)
     }
 }
 
