@@ -13,7 +13,10 @@ fixture('Project management feature test')
         await t.click(TodayHomePage.proximoSection)
         while(TodayHomePage.taskListItem.exists){
             try{
-                await t.click(TodayHomePage.taskRadioButton)
+                await t.click(TodayHomePage.taskListItemContent)
+                .click(TodayHomePage.taskDetailOptionsButton)
+                .click(TodayHomePage.taskDetailInternalMenuDelete)
+                .click(TodayHomePage.taskConfirmDeleteButton)
             }catch(exception){
                 break
             }

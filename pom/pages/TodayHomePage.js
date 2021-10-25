@@ -15,6 +15,10 @@ class TodayHomePage{
         this.calendarSelectedDay = Selector('.calendar__day--selected > .calendar__day__date > .calendar__day__date__number')
         this.taskListItem = Selector('.task_list_item')
         this.taskRadioButton = Selector('.task_checkbox')
+        this.taskListItemContent = Selector('.task_list_item__content')
+        this.taskDetailOptionsButton = Selector('.item_actions_more')
+        this.taskDetailInternalMenuDelete = Selector('.danger_menu > .icon_menu_item__content')
+        this.taskConfirmDeleteButton = Selector('.confirm_dialog__actions > button.ist_button_red')
 
         //menu lateral
         this.proximoSection = Selector('#list_holder > #top_filters > #filter_upcoming')
