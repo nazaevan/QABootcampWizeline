@@ -1,10 +1,15 @@
 # QABootcampWizeline
 
 QABootcampWizeline
-
 This project contains functional testcases for todoist.com webpage
 
 ### For setup and run the project considere the next .env template
+
+### Tree Folder description:
+#### pom/ (Abrebiation of Page Objet Model, base folder container)
+#### ├─ data/ (It contains general configuration for constants needed for execution)
+#### ├─ pages/ (It contains the pages mapped from webpage)
+#### ├─ tests/ (It contains all the developed tests)
 
 ## This is the base structure of .env file, necessary for the excecution. Create this .env file at root.
 ### Precondition: create a basic account on todoist (with email account, not google account or other.)
@@ -17,7 +22,6 @@ TODAY_HOMEPAGE_TITLE=Set 'Hoy' if your web browser is in spanish, change it for 
 PROJECT_NAME_TOGGLE_MENU=Set 'Proyectos' if your web browser is in spanish, change it for 'Projects' if is in english
 
 ### To execute the testcases scripts, considere the following instructions. These are defined in packages.json
-
 #### --It runs all the testsuites and generates an html report to visualize the results.
 "test": "testcafe chrome ./pom/tests --reporter html:./report.html"
 
