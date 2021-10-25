@@ -3,16 +3,15 @@
 QABootcampWizeline
 This project contains functional testcases for todoist.com webpage
 
-### For setup and run the project considere the next .env template
-
 ### Tree Folder description:
 #### pom/ (Abrebiation of Page Objet Model, base folder container)
 #### ├─ data/ (It contains general configuration for constants needed for execution)
 #### ├─ pages/ (It contains the pages mapped from webpage)
 #### ├─ tests/ (It contains all the developed tests)
 
-## This is the base structure of .env file, necessary for the excecution. Create this .env file at root.
-### Precondition: create a basic account on todoist (with email account, not google account or other.)
+## For setup and run the project considere the next .env template
+### This is the base structure of .env file, necessary for the excecution. Create this .env file at root.
+#### Precondition: create a basic account on todoist (with email account, not google account or other.)
 STANDARD_USER_USERNAME=your email account
 STANDARD_USER_PASSWORD=your password account
 GOOGLE_USER_USERNAME=google email account (not necessary)
